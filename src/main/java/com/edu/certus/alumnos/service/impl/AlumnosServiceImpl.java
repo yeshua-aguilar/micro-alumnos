@@ -48,7 +48,7 @@ public class AlumnosServiceImpl implements AlumnosService{
 	}
 
 	@Override
-	public ResponseDto getAlumnos(Long id) {
+	public ResponseDto getAlumnos(int id) {
 		try {
 			AlumnosEntity alumnosEntity = alumnosRepository.findById(id).orElse(null);
 			if(null == alumnosEntity) {
@@ -102,7 +102,7 @@ public class AlumnosServiceImpl implements AlumnosService{
 	}
 
 	@Override
-	public ResponseDto deleteAlumnos(Long id) {
+	public ResponseDto deleteAlumnos(int id) {
 		try {
 			AlumnosEntity alumnosEntity = alumnosRepository.findById(id).orElse(null);
 			alumnosEntity.setEstado(false);

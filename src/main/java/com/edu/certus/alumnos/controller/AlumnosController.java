@@ -32,7 +32,7 @@ public class AlumnosController {
 	
 	@ApiOperation(value = "obtener alumnos por su id")
 	@GetMapping("/{id}")
-	public ResponseEntity<ResponseDto> readAlumnos(@PathVariable("id") Long id){
+	public ResponseEntity<ResponseDto> readAlumnos(@PathVariable("id") int id){
 		return ResponseEntity.status(HttpStatus.OK).body(alumnosService.getAlumnos(id));
 	}
 	
@@ -51,7 +51,7 @@ public class AlumnosController {
 	@ApiOperation(value = "eliminar alumnos por su id")
 	@DeleteMapping("/{id}")
 	public ResponseEntity<ResponseDto> deleteAlumnos(
-			@PathVariable("id") Long id){
+			@PathVariable("id") int id){
 		return ResponseEntity.status(HttpStatus.OK).body(alumnosService.deleteAlumnos(id));
 	}
 }

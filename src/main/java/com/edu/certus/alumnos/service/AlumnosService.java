@@ -5,9 +5,9 @@ import com.edu.certus.alumnos.dto.ResponseDto;
 
 public interface AlumnosService {
     public ResponseDto getAllAlumnos();
-	public ResponseDto getAlumnos(Long id);
+	public ResponseDto getAlumnos(int id);
 	public ResponseDto createAlumnos(AlumnosDto alumnos);
 	public ResponseDto updateAlumnos(AlumnosDto alumnos);
-	public ResponseDto deleteAlumnos(Long id);
+	public ResponseDto deleteAlumnos(int id);
 	/*CRUD*/
 }

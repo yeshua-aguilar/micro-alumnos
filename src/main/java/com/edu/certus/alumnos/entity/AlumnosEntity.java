@@ -27,7 +27,7 @@ public class AlumnosEntity {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id_alumnos")
-	private Long id;
+	private int id;
 	@Column(name = "nombres")
 	private String nombres;
 	@Column(name = "apellidos")
